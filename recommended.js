@@ -38,7 +38,7 @@ function downloadImageByURL(url, filePath) {
 if (query.length === 2) {
   getRepoContributors(query[0], query[1], function(data) {
     for ( var i = 0; i < data.length; i++){
-      url = data[i].avatar_url;
+      url = data[i].starred_url;
       filePath = "avatars/" + data[i].login + ".jpeg";
       downloadImageByURL(url, filePath);
     }
@@ -46,12 +46,5 @@ if (query.length === 2) {
 } else {
   console.log("please enter <owner> and <repo>");
 }
-
-
-  starred_url
-
-
-
-
 
 
